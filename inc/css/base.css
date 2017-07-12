@@ -11,7 +11,8 @@ header{
 	box-sizing:border-box;
 }
 
-
+/*.carousel-cells{position: relative;}*/
+.carousel-cells article{ position: inherit;}
 
 .slide-text {
 	width: inherit;
