@@ -12,16 +12,16 @@
 			//ADD INITIALIZER CODE HERE
 			// $(".main-carousel").carousel();
 
-			// $(".carousel-next").click(function() {
-			//     $(".slide-text").fadeOut(1, function() {
-			//    		$("").fadeIn(1);
-			//     });
-			//     return false;
-			// });
-
 			$(".carousel-next").click(function() {
-			   $(".slide-text").slideToggle(1);
-			});
+		    	$('.carousel-cells > :first-child').fadeOut().next('article')
+			    	.fadeIn().end().appendTo('.carousel-cells');
+		    });
+
+
+			$(".carousel-prev").click(function() {
+		    	$('.carousel-cells article').fadeOut(1).next(":last-child")
+			    	.fadeIn(1).last().prependTo(".carousel-cells");
+		    });
 
 		},
 		bindEvents:function(){
@@ -38,6 +38,7 @@
 		},
 		previous:function(){
 			//ADD PREVIOUS CODE HERE
+			
 			
 		},
 		update:function(){
